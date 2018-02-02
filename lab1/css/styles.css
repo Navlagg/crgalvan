@@ -11,6 +11,7 @@
         }
         footer{
             margin:0 auto;
+            text-align:center;
         }
         #content {
             margin:0 auto;
@@ -33,7 +34,7 @@
         
         #csumb {
             width:200px;
-            height:150;
+            height:150px;
         }
         figure,div {
             float:center;
@@ -58,7 +59,7 @@
         #table-header {
             background-color: #351a00;
         }
-        tr strong {
+        .css-row {
             background-color:yellow;
         }
         ul {
