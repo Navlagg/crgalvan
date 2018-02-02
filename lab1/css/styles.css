@@ -1,21 +1,22 @@
  body {
             background-color:black;
-            color:gray;
+            color:white;
             text-align:center;
         }
         
-        header, nav, main, footer {
+        header, nav, main {
             text-align: left;
             
             
+        }
+        footer{
+            margin:0 auto;
         }
         #content {
             margin:0 auto;
             width:600px;
         }
-        table {
-            margin:0 auto;
-        }
+        
        nav a {
             padding-bottom:4px;
             padding: 15px;
@@ -29,12 +30,10 @@
             font-size: 2em;
             transition: .9s;
         }
-        #me {
-           border-radius: 40px; 
-            
-        }
+        
         #csumb {
-            width:500px;
+            width:200px;
+            height:150;
         }
         figure,div {
             float:center;
@@ -59,8 +58,8 @@
         #table-header {
             background-color: #351a00;
         }
-        .table-row {
-            background-color:#753900;
+        tr strong {
+            background-color:yellow;
         }
         ul {
             text-align:left;
