@@ -53,6 +53,9 @@
             font-size: 1.3em;
             
         }
+        table{
+            text-align:center;
+        }
         td strong {
             color:orange;
         }
