@@ -5,7 +5,7 @@
         }
         
         header, nav, main {
-            text-align: left;
+            text-align: center;
             
             
         }
@@ -60,7 +60,7 @@
             background-color: #351a00;
         }
         .css-row {
-            background-color:753900;
+            background-color:orange;
         }
         ul {
             text-align:left;
