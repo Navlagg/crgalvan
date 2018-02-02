@@ -4,15 +4,13 @@
             text-align:center;
         }
         
-        header, nav, main {
+        header, nav, main,footer{
             text-align: center;
-            
-            
-        }
-        footer{
             margin:0 auto;
-            text-align:center;
+
+            
         }
+       
         #content {
             margin:0 auto;
             width:600px;
@@ -53,9 +51,7 @@
             font-size: 1.3em;
             
         }
-        table{
-            text-align:center;
-        }
+       
         td strong {
             color:orange;
         }
