@@ -31,7 +31,9 @@
             }
             #razer{
                 float:right;
-                position:absolute;
+                position: absolute;
+                position: -webkit-sticky;
+                position: sticky;
             }
             #gaming{
                 text-align:center;
