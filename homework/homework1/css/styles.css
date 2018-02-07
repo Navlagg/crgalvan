@@ -25,6 +25,10 @@
                  font-size: 2em;
                  transition: .9s;
             }
+            .active {
+                background-color: white;
+                color: green;
+            }
             #razer{
                 float:right;
             }
