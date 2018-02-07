@@ -1,1 +1,0 @@
-Welcome to Cristian Galvan's CST336 Home Page!
