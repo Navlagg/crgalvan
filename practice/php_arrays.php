@@ -10,10 +10,35 @@
  
  $cards[2] = "ten";
 
- print_r($cards); 
+ //print_r($cards); 
  
- echo "<img src= ../challenges/challenge2/cards/clubs/ace.png>";
+ //displayCard($cards[3]);
  
+ print_r($cards);
+ echo "<hr>";
+ $lastCard = array_pop($cards); //retrieves and REMOVE the last item in the array
+ displayCard($lastCard);
+ echo "<hr>";
+ print_r($cards);
+ 
+ unset($cards[1]); //removes element from array
+ echo "<hr>";
+ print_r($cards);
+ 
+ $cards = array_values($cards); //re-indexes array
+ echo "<hr>";
+ print_r($cards);
+ 
+ 
+ 
+ function displayCard($card) {
+     
+    // global $cards; //using variable that is outside of the function
+    // echo "<img src='../challenges/challenge2/img/cards/clubs/$cards[2].png' />";
+
+    echo "<img src='../challenges/challenge2/img/cards/clubs/$card.png' />";
+
+ }
  
 
 ?>
