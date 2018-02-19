@@ -1,0 +1,29 @@
+body {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    margin: 0;
+}
+
+#top {
+    background-color: #1C86EE;
+    padding: 12px;
+    color: white;
+}
+
+#shadow {
+    background-color: #104E8B;
+    margin: 0;
+    height: 12px;
+}
+
+#title {
+    font-size: 3em;
+    margin: 0;
+}
+
+#main {
+    width: 85%;
+    padding: 12px;
+    background-color: #e6e6e6;
+    margin: 0 auto;
+}
