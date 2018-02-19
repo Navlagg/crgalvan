@@ -1,0 +1,59 @@
+html {
+    font-family: sans-serif;
+}
+
+body {
+    text-align: center;
+    margin: 0 auto;
+     background-image: url("http://wallpapercave.com/wp/I2E1rG0.jpg");
+}
+
+#top {
+    background-image: url("http://www.spyderonlines.com/images/wallpapers/casino-wallpaper/casino-wallpaper-13.jpg");
+    font-size: 4em;
+    font-weight: bold;
+    color: white;
+    height: 150px;
+    line-height: 150px;
+    text-align: center;
+    width: 85%;
+    margin: 0 auto;
+}
+
+#main {
+    width: 85%;
+    margin: 0 auto;
+    margin-top: 5px;
+    padding-top: 11px;
+    background: rgba(218, 226, 239, 0.4);
+    
+   
+}
+
+
+
+
+.cardsRow {
+    display:inline;
+    height: 150px;
+    padding: 5px;
+    margin: 0 auto;
+    width: 94%;
+    text-align: left;
+    font-size: 2em;
+ 
+    
+    
+}
+
+#results{
+    display: inline;
+    display: inline;
+    padding: 2px;
+    font-size: 2em;
+    color: red;
+    font-weight: bold;
+    
+
+}
+
