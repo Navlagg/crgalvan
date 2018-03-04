@@ -2,3 +2,19 @@
 [12-Feb-2018 22:43:31 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/ubuntu/workspace/crgalvan/labs/lab2/index.php on line 62
 [12-Feb-2018 22:43:33 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/ubuntu/workspace/crgalvan/labs/lab2/index.php on line 62
 [12-Feb-2018 22:43:42 UTC] PHP Parse error:  syntax error, unexpected '1' (T_LNUMBER), expecting variable (T_VARIABLE) or '$' in /home/ubuntu/workspace/crgalvan/labs/lab2/index.php on line 67
+[21-Feb-2018 23:41:29 UTC] PHP Warning:  array_rand() expects parameter 1 to be array, null given in /home/ubuntu/workspace/crgalvan/labs/lab4/index.php on line 13
+[21-Feb-2018 23:41:29 UTC] PHP Stack trace:
+[21-Feb-2018 23:41:29 UTC] PHP   1. {main}() /home/ubuntu/workspace/crgalvan/labs/lab4/index.php:0
+[21-Feb-2018 23:41:29 UTC] PHP   2. array_rand() /home/ubuntu/workspace/crgalvan/labs/lab4/index.php:13
+[21-Feb-2018 23:41:30 UTC] PHP Warning:  array_rand() expects parameter 1 to be array, null given in /home/ubuntu/workspace/crgalvan/labs/lab4/index.php on line 13
+[21-Feb-2018 23:41:30 UTC] PHP Stack trace:
+[21-Feb-2018 23:41:30 UTC] PHP   1. {main}() /home/ubuntu/workspace/crgalvan/labs/lab4/index.php:0
+[21-Feb-2018 23:41:30 UTC] PHP   2. array_rand() /home/ubuntu/workspace/crgalvan/labs/lab4/index.php:13
+[21-Feb-2018 23:41:59 UTC] PHP Warning:  array_rand() expects parameter 1 to be array, null given in /home/ubuntu/workspace/crgalvan/labs/lab4/index.php on line 13
+[21-Feb-2018 23:41:59 UTC] PHP Stack trace:
+[21-Feb-2018 23:41:59 UTC] PHP   1. {main}() /home/ubuntu/workspace/crgalvan/labs/lab4/index.php:0
+[21-Feb-2018 23:41:59 UTC] PHP   2. array_rand() /home/ubuntu/workspace/crgalvan/labs/lab4/index.php:13
+[21-Feb-2018 23:42:00 UTC] PHP Warning:  array_rand() expects parameter 1 to be array, null given in /home/ubuntu/workspace/crgalvan/labs/lab4/index.php on line 13
+[21-Feb-2018 23:42:00 UTC] PHP Stack trace:
+[21-Feb-2018 23:42:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/crgalvan/labs/lab4/index.php:0
+[21-Feb-2018 23:42:00 UTC] PHP   2. array_rand() /home/ubuntu/workspace/crgalvan/labs/lab4/index.php:13

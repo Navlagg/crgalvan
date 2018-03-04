@@ -1,0 +1,9 @@
+[19-Feb-2018 23:45:34 UTC] PHP Parse error:  syntax error, unexpected '$currentnum' (T_VARIABLE) in /home/ubuntu/workspace/crgalvan/challenges/challenge3/inc/functions.php on line 9
+[19-Feb-2018 23:45:34 UTC] PHP Stack trace:
+[19-Feb-2018 23:45:34 UTC] PHP   1. {main}() /home/ubuntu/workspace/crgalvan/challenges/challenge3/challenge3.php:0
+[19-Feb-2018 23:46:05 UTC] PHP Parse error:  syntax error, unexpected '$currentnum' (T_VARIABLE) in /home/ubuntu/workspace/crgalvan/challenges/challenge3/inc/functions.php on line 9
+[19-Feb-2018 23:46:05 UTC] PHP Stack trace:
+[19-Feb-2018 23:46:05 UTC] PHP   1. {main}() /home/ubuntu/workspace/crgalvan/challenges/challenge3/challenge3.php:0
+[19-Feb-2018 23:46:06 UTC] PHP Parse error:  syntax error, unexpected '$currentnum' (T_VARIABLE) in /home/ubuntu/workspace/crgalvan/challenges/challenge3/inc/functions.php on line 9
+[19-Feb-2018 23:46:06 UTC] PHP Stack trace:
+[19-Feb-2018 23:46:06 UTC] PHP   1. {main}() /home/ubuntu/workspace/crgalvan/challenges/challenge3/challenge3.php:0
