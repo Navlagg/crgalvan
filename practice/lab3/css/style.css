@@ -1,0 +1,33 @@
+
+body {
+    text-align: center;
+    margin: 0 auto;
+    /* background-image: url(); <== find good background image?*/
+}
+
+#top {
+    font-size: 4em;
+    
+}
+
+#main {
+   
+}
+
+
+
+
+.cardsRow {
+    display:inline;
+    
+ 
+    
+    
+}
+
+#results{
+    display: inline;
+    font-size: 2em;
+    color: red;
+}
+
