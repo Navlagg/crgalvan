@@ -96,7 +96,7 @@
         <link rel="stylesheet" type="text/css" href="css/style.css">
     </head>
     
-    <body>
+    <body background="images.jpeg">
         <h1>Profile Generator and Car Generator via Zodiac Sign</h1>
         
         <div id="formBox">

@@ -13,6 +13,8 @@ table {
 
 body {
     text-align: center;
+    background-image: url("image.jpeg");
+    color:white;
 }
 
 #formBox {
