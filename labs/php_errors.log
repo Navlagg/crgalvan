@@ -18,3 +18,51 @@
 [21-Feb-2018 23:42:00 UTC] PHP Stack trace:
 [21-Feb-2018 23:42:00 UTC] PHP   1. {main}() /home/ubuntu/workspace/crgalvan/labs/lab4/index.php:0
 [21-Feb-2018 23:42:00 UTC] PHP   2. array_rand() /home/ubuntu/workspace/crgalvan/labs/lab4/index.php:13
+[12-Mar-2018 22:11:50 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''om_category' ORDER BY catName' at line 1' in /home/ubuntu/workspace/crgalvan/labs/lab6/index.php:10
+Stack trace:
+#0 /home/ubuntu/workspace/crgalvan/labs/lab6/index.php(10): PDOStatement->execute()
+#1 /home/ubuntu/workspace/crgalvan/labs/lab6/index.php(36): displayCategories()
+#2 {main}
+  thrown in /home/ubuntu/workspace/crgalvan/labs/lab6/index.php on line 10
+[12-Mar-2018 22:12:13 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''om_category' ORDER BY catName' at line 1' in /home/ubuntu/workspace/crgalvan/labs/lab6/index.php:10
+Stack trace:
+#0 /home/ubuntu/workspace/crgalvan/labs/lab6/index.php(10): PDOStatement->execute()
+#1 /home/ubuntu/workspace/crgalvan/labs/lab6/index.php(36): displayCategories()
+#2 {main}
+  thrown in /home/ubuntu/workspace/crgalvan/labs/lab6/index.php on line 10
+[12-Mar-2018 22:13:03 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''om_category' ORDER BY catName' at line 1' in /home/ubuntu/workspace/crgalvan/labs/lab6/index.php:10
+Stack trace:
+#0 /home/ubuntu/workspace/crgalvan/labs/lab6/index.php(10): PDOStatement->execute()
+#1 /home/ubuntu/workspace/crgalvan/labs/lab6/index.php(36): displayCategories()
+#2 {main}
+  thrown in /home/ubuntu/workspace/crgalvan/labs/lab6/index.php on line 10
+[12-Mar-2018 22:13:46 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''om_category' ORDER BY catName' at line 1' in /home/ubuntu/workspace/crgalvan/labs/lab6/index.php:10
+Stack trace:
+#0 /home/ubuntu/workspace/crgalvan/labs/lab6/index.php(10): PDOStatement->execute()
+#1 /home/ubuntu/workspace/crgalvan/labs/lab6/index.php(36): displayCategories()
+#2 {main}
+  thrown in /home/ubuntu/workspace/crgalvan/labs/lab6/index.php on line 10
+[12-Mar-2018 22:13:47 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''om_category' ORDER BY catName' at line 1' in /home/ubuntu/workspace/crgalvan/labs/lab6/index.php:10
+Stack trace:
+#0 /home/ubuntu/workspace/crgalvan/labs/lab6/index.php(10): PDOStatement->execute()
+#1 /home/ubuntu/workspace/crgalvan/labs/lab6/index.php(36): displayCategories()
+#2 {main}
+  thrown in /home/ubuntu/workspace/crgalvan/labs/lab6/index.php on line 10
+[12-Mar-2018 22:13:48 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''om_category' ORDER BY catName' at line 1' in /home/ubuntu/workspace/crgalvan/labs/lab6/index.php:10
+Stack trace:
+#0 /home/ubuntu/workspace/crgalvan/labs/lab6/index.php(10): PDOStatement->execute()
+#1 /home/ubuntu/workspace/crgalvan/labs/lab6/index.php(36): displayCategories()
+#2 {main}
+  thrown in /home/ubuntu/workspace/crgalvan/labs/lab6/index.php on line 10
+[12-Mar-2018 22:18:01 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''om_category' ORDER BY catName' at line 1' in /home/ubuntu/workspace/crgalvan/labs/lab6/index.php:10
+Stack trace:
+#0 /home/ubuntu/workspace/crgalvan/labs/lab6/index.php(10): PDOStatement->execute()
+#1 /home/ubuntu/workspace/crgalvan/labs/lab6/index.php(46): displayCategories()
+#2 {main}
+  thrown in /home/ubuntu/workspace/crgalvan/labs/lab6/index.php on line 10
+[12-Mar-2018 22:18:11 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''om_category' ORDER BY catName' at line 1' in /home/ubuntu/workspace/crgalvan/labs/lab6/index.php:10
+Stack trace:
+#0 /home/ubuntu/workspace/crgalvan/labs/lab6/index.php(10): PDOStatement->execute()
+#1 /home/ubuntu/workspace/crgalvan/labs/lab6/index.php(46): displayCategories()
+#2 {main}
+  thrown in /home/ubuntu/workspace/crgalvan/labs/lab6/index.php on line 10

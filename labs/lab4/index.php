@@ -45,7 +45,7 @@
         <title> Lab 4: Pixabay Carousel </title>
     </head>
     <style>
-          @import url("css/styles.css");
+        @import url("css/styles.css");
         @import url("https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css");
         body{
             background-image:url(<?=$backgroundImage?>);

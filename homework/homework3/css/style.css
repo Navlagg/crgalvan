@@ -1,0 +1,31 @@
+html {
+    font-family: sans-serif;
+}
+
+td {
+    width: 15px;
+    height: 15px;
+}
+
+table {
+    display: inline-block;
+}
+
+body {
+    text-align: center;
+}
+
+#formBox {
+    width: 50%;
+    margin: 0 auto;
+    text-align: left;
+}
+
+#profile {
+    margin: 0 auto;
+    padding: 12px;
+    text-align: left;
+    display: inline-block;
+    color: white;
+}
+
