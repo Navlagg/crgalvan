@@ -29,51 +29,51 @@
                     if (isset($_GET['displaysign'])){
                         if (($_SESSION["month"] == 12 && $_SESSION["day"] >= 22 && $_SESSION["day"] <= 31) || ($_SESSION["month"] ==  1 && $_SESSION["day"] >= 1 && $_SESSION["day"] <= 19)){
                             echo "Zodiac Sign: Capricorn <br />";
-                            echo "Corresponding Car: Jeep<br /><img src='/img/1.jpg' style='width:128px;height:128px;'>";
+                            echo "Corresponding Car: Jeep<br /><img src='img/1.jpg' style='width:256px;height:128px;'>";
                         }
                         else if (($_SESSION["month"] ==  1 && $_SESSION["day"] >= 20 && $_SESSION["day"] <= 31) || ($_SESSION["month"] ==  2 && $_SESSION["day"] >= 1 && $_SESSION["day"] <= 18)){
                             echo "Zodiac Sign: Aquarius <br />";
-                            echo "Corresponding Car: Mustang GT<br /><img src='/img/2.jpg' style='width:128px;height:128px;'>";
+                            echo "Corresponding Car: Mustang GT<br /><img src='img/2.jpg' style='width:256px;height:128px;'>";
                         }
                         else if (($_SESSION["month"] ==  2 && $_SESSION["day"] >= 19 && $_SESSION["day"] <= 29) || ($_SESSION["month"] ==  3 && $_SESSION["day"] >= 1 && $_SESSION["day"] <= 20)){
                             echo "Zodiac Sign: Pisces <br />";
-                            echo "Corresponding Car: VolksWagen<br /><img src='/img/3.jpg' style='width:128px;height:128px;'>";
+                            echo "Corresponding Car: VolksWagen<br /><img src='img/3.jpg' style='width:256px;height:128px;'>";
                         }
                         else if (($_SESSION["month"] ==  3 && $_SESSION["day"] >= 21 && $_SESSION["day"] <= 31) || ($_SESSION["month"] ==  4 && $_SESSION["day"] >= 1 && $_SESSION["day"] <= 19)){
                             echo "Zodiac Sign: Aries";
-                            echo "Corresponding Car: Ford Focus<br /><img src='/img/4.jpg' style='width:128px;height:128px;'>";
+                            echo "Corresponding Car: Ford Focus<br /><img src='img/4.jpg' style='width:256px;height:128px;'>";
                         }
                         else if (($_SESSION["month"] ==  4 && $_SESSION["day"] >= 20 && $_SESSION["day"] <= 30) || ($_SESSION["month"] ==  5 && $_SESSION["day"] >= 1 && $_SESSION["day"] <= 20)){
                             echo "Zodiac Sign: Taurus";
-                            echo "Corresponding Car: Mini Cooper<br /><img src='/img/5.jpg' style='width:128px;height:128px;'>";
+                            echo "Corresponding Car: Mini Cooper<br /><img src='img/5.jpg' style='width:256px;height:128px;'>";
                         }
                         else if (($_SESSION["month"] ==  5 && $_SESSION["day"] >= 21 && $_SESSION["day"] <= 31) || ($_SESSION["month"] ==  6 && $_SESSION["day"] >= 1 && $_SESSION["day"] <= 20)){
                             echo "Zodiac Sign: Gemini";
-                            echo "Corresponding Car: Ford GT<br /><img src='/img/13.jpg' style='width:128px;height:128px;'>";
+                            echo "Corresponding Car: Ford GT<br /><img src='img/13.jpg' style='width:256px;height:128px;'>";
                         }
                         else if (($_SESSION["month"] ==  6 && $_SESSION["day"] >= 21 && $_SESSION["day"] <= 30) || ($_SESSION["month"] ==  7 && $_SESSION["day"] >= 1 && $_SESSION["day"] <= 22)){
                             echo "Zodiac Sign: Cancer";
-                            echo "Corresponding Car: BMW<br /><img src='/img/7.jpg' style='width:128px;height:128px;'>";
+                            echo "Corresponding Car: BMW<br /><img src='img/7.jpg' style='width:256px;height:128px;'>";
                         }
                         else if (($_SESSION["month"] ==  7 && $_SESSION["day"] >= 23 && $_SESSION["day"] <= 31) || ($_SESSION["month"] ==  8 && $_SESSION["day"] >= 1 && $_SESSION["day"] <= 22)){
                             echo "Zodiac Sign: Leo";
-                            echo "Corresponding Car: Mercedes E-Class<br /><img src='/img/8.jpg' style='width:128px;height:128px;'>";
+                            echo "Corresponding Car: Mercedes E-Class<br /><img src='img/8.jpg' style='width:256px;height:128px;'>";
                         }
                         else if (($_SESSION["month"] ==  8 && $_SESSION["day"] >= 23 && $_SESSION["day"] <= 31) || ($_SESSION["month"] ==  9 && $_SESSION["day"] >= 1 && $_SESSION["day"] <= 22)){
                             echo "Zodiac Sign: Virgo";
-                            echo "Corresponding Car: Volvo<br /><img src='/img/9.jpg' style='width:128px;height:128px;'>";
+                            echo "Corresponding Car: Volvo<br /><img src='img/9.jpg' style='width:256px;height:128px;'>";
                         }
                         else if (($_SESSION["month"] ==  9 && $_SESSION["day"] >= 23 && $_SESSION["day"] <= 30) || ($_SESSION["month"] == 10 && $_SESSION["day"] >= 1 && $_SESSION["day"] <= 22)){
                             echo "Zodiac Sign: Libra";
-                            echo "Corresponding Car: Jaguar<br /><img src='/img/10.jpg' style='width:128px;height:128px;'>";
+                            echo "Corresponding Car: Jaguar<br /><img src='img/10.jpg' style='width:256px;height:128px;'>";
                         }
                         else if (($_SESSION["month"] == 10 && $_SESSION["day"] >= 23 && $_SESSION["day"] <= 31) || ($_SESSION["month"] == 11 && $_SESSION["day"] >= 1 && $_SESSION["day"] <= 21)){
                             echo "Zodiac Sign: Scorpio";
-                            echo "Corresponding Car: Land Rover Discovery<br /><img src='/img/11.jpg' style='width:128px;height:128px;'>";
+                            echo "Corresponding Car: Land Rover Discovery<br /><img src='img/11.jpg' style='width:256px;height:128px;'>";
                         }
                         else if (($_SESSION["month"] == 11 && $_SESSION["day"] >= 22 && $_SESSION["day"] <= 30) || ($_SESSION["month"] == 12 && $_SESSION["day"] >= 1 && $_SESSION["day"] <= 21)){
                             echo "Zodiac Sign: Sagittarius";
-                            echo "Corresponding Car: Chevrolet Camaro SS<br /><img src='/img/12.jpg' style='width:128px;height:128px;'>";
+                            echo "Corresponding Car: Chevrolet Camaro SS<br /><img src='img/12.jpg' style='width:256px;height:128px;'>";
                         }
                     }
     
