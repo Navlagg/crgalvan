@@ -121,9 +121,9 @@
             
             Profile Background: &nbsp;
             
-            <input type="radio" name="colorPerCell" value="#33adff" id="blue" <?php if(@$_SESSION["color"] == "blue") echo "checked"?>/><label for="blue">Blue</label>
-            <input type="radio" name="colorPerCell" value="#ff3300" id="red" <?php if(@$_SESSION["color"] == "red") echo "checked"?>/><label for="red">Red</label>
-            <input type="radio" name="colorPerCell" value="#c6ff1a" id="yellow" <?php if(@$_SESSION["color"] == "yellow") echo "checked"?>/><label for="yellow">Yellow</label>
+            <input type="radio" name="colorPerCell" value="#33adff" id="blue" <?php if(@$_SESSION["color"] == "#33adff") echo "checked"?>/><label for="blue">Blue</label>
+            <input type="radio" name="colorPerCell" value="#ff3300" id="red" <?php if(@$_SESSION["color"] == "#ff3300") echo "checked"?>/><label for="red">Red</label>
+            <input type="radio" name="colorPerCell" value="#c6ff1a" id="yellow" <?php if(@$_SESSION["color"] == "#c6ff1a") echo "checked"?>/><label for="yellow">Yellow</label>
             
             
             <br /> <h4>Birth Date:</h4>
