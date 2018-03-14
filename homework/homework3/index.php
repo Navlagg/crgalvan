@@ -26,14 +26,14 @@
                 echo "<h1>" . $_SESSION['lastName'] . ", " .  $_SESSION['firstName'] . "</h1>";
                 echo "Graduating CSUMB in " . ($_SESSION['age'] - 2016) . " years.";
                 echo "<br/>" . $_SESSION['major'] . " Major<br />";
-                    if (isset($_GET['displaysign'])){
+                    if (!isset($_GET['displaysign'])){
                         if (($_SESSION["month"] == 12 && $_SESSION["day"] >= 22 && $_SESSION["day"] <= 31) || ($_SESSION["month"] ==  1 && $_SESSION["day"] >= 1 && $_SESSION["day"] <= 19)){
                             echo "Zodiac Sign: Capricorn <br />";
                             echo "Corresponding Car: Jeep<br /><img src='img/1.jpg' style='width:256px;height:128px;'>";
                         }
                         else if (($_SESSION["month"] ==  1 && $_SESSION["day"] >= 20 && $_SESSION["day"] <= 31) || ($_SESSION["month"] ==  2 && $_SESSION["day"] >= 1 && $_SESSION["day"] <= 18)){
                             echo "Zodiac Sign: Aquarius <br />";
-                            echo "Corresponding Car: Mustang GT<br /><img src='img/2.jpg' style='width:256px;height:128px;'>";
+                            echo "Corresponding Car: Mustang GT<br /><img src='img/2.JPG' style='width:256px;height:128px;'>";
                         }
                         else if (($_SESSION["month"] ==  2 && $_SESSION["day"] >= 19 && $_SESSION["day"] <= 29) || ($_SESSION["month"] ==  3 && $_SESSION["day"] >= 1 && $_SESSION["day"] <= 20)){
                             echo "Zodiac Sign: Pisces <br />";
@@ -177,7 +177,7 @@
             <option value='31'>31</option>
             </select>
             <br /><br />
-            <input type="checkbox" name="displaysign" value="sign" id="check"><label for="check">Display Zodiac Sign and Car?</label>
+            <input type="checkbox" name="displaysign" value="sign" id="check"><label for="check">Do Not Display Zodiac Sign and Car</label>
             
             <br />
             
