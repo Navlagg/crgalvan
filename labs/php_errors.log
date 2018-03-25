@@ -66,3 +66,8 @@ Stack trace:
 #1 /home/ubuntu/workspace/crgalvan/labs/lab6/index.php(46): displayCategories()
 #2 {main}
   thrown in /home/ubuntu/workspace/crgalvan/labs/lab6/index.php on line 10
+[14-Mar-2018 22:35:33 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/crgalvan/labs/lab6/purchaseHistory.php:15
+Stack trace:
+#0 /home/ubuntu/workspace/crgalvan/labs/lab6/purchaseHistory.php(15): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/crgalvan/labs/lab6/purchaseHistory.php on line 15
