@@ -89,6 +89,7 @@
 <html>
     <head>
         <title> OtterMart Product Search </title>
+        <style>@import url("css/styles.css");</style>
     </head>
     <body>
 
