@@ -71,3 +71,13 @@ Stack trace:
 #0 /home/ubuntu/workspace/crgalvan/labs/lab6/purchaseHistory.php(15): PDOStatement->execute()
 #1 {main}
   thrown in /home/ubuntu/workspace/crgalvan/labs/lab6/purchaseHistory.php on line 15
+[26-Mar-2018 22:16:06 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'passsword' in 'where clause'' in /home/ubuntu/workspace/crgalvan/labs/lab7/loginProcess.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/crgalvan/labs/lab7/loginProcess.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/crgalvan/labs/lab7/loginProcess.php on line 14
+[26-Mar-2018 22:16:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S22]: Column not found: 1054 Unknown column 'passsword' in 'where clause'' in /home/ubuntu/workspace/crgalvan/labs/lab7/loginProcess.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/crgalvan/labs/lab7/loginProcess.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/crgalvan/labs/lab7/loginProcess.php on line 14
