@@ -1,4 +1,3 @@
-
 <?php
 
 include '../includes/dbConnection.php';
@@ -151,82 +150,8 @@ include '../includes/dbConnection.php';
         
         echo "</table>";
         echo "</form>";
-}
-      function getSandwich()
-    {
-        global $dbConn;
-        
-        $sql = "SELECT * 
-                FROM sandwich
-                ORDER BY name";
-                
-        if (isset($_GET['nameSort']))
-            $sql = "SELECT * FROM sandwich ORDER BY name";
-          
-        
-        if (isset($_GET['sort']))
-            $sql = "SELECT * FROM sandwich ORDER BY price";   
-            
-        $statement = $dbConn->prepare($sql);
-        $statement->execute();
-        $records = $statement->fetchAll(PDO::FETCH_ASSOC);
-        
-        echo "<form>";
-        echo "<table align='center'>";
-        
-                echo "<tr><td> </td>" . "<td>Item</td>" . "<td> Price </td>" . "<td> Image </td></tr>" ;
 
-
-        foreach ($records as $record)
-        {
-            echo "<tr><td>". "<input type='checkbox' name='cartt[]'   value =" . $record['name'] . "> </td>" ;
-            echo "<td>" .$record['name']. "</td><td>" .$record['price']. "</td><td><img src='img/sanwiches/".$record['name'].".jpg'/></td></tr>";
-        }
-        
-        echo "</table>";
-        echo "</form>";
-        
-        foreach($records as $record) {
-          echo "<input type='checkbox' name='cartt[]'    value =" . $record['name'] . ">";
-          echo $record['name'] . " - ". $record['price'] . "<br/> ";
-      }
-    }
-    
-        function getVegetarian()
-    {
-        global $dbConn;
-        
-        $sql = "SELECT * 
-                FROM vegetarian
-                ORDER BY name";
-        
-        if (isset($_GET['nameSort']))
-            $sql = "SELECT * FROM vegetarian ORDER BY name";
-         
-         
-        if (isset($_GET['sort']))
-            $sql = "SELECT * FROM vegetarian ORDER BY price";    
-            
-        $statement = $dbConn->prepare($sql);
-        $statement->execute();
-        $records = $statement->fetchAll(PDO::FETCH_ASSOC);
-        
-        echo "<form>";
-        echo "<table align='center'>";
-                echo "<tr><td> </td>" . "<td>Item</td>" . "<td> Price </td>" . "<td> Image </td></tr>" ;
-
-
-        foreach ($records as $record)
-        {
-            echo "<tr><td>". "<input type='checkbox' name='cartt[]'   value =" . $record['name'] . "> </td>" ;
-            echo "<td>" .$record['name']. "</td><td>" .$record['price']. "</td><td><img src='img/Vegetarian/".$record['name'].".jpg'/></td></tr>";
-        }
-        
-        echo "</table>";
-        echo "</form>";
-        
-
-    
+      
     }
     
 ?>
@@ -245,7 +170,7 @@ include '../includes/dbConnection.php';
 <ul class="topnav">
   <li> <a href="index.php">Home </a> </li>
    <li> <a href="menu.php">Menu </a>  </li>
-   
+   <li> <a href="location.php" > Location </a> </li>
 
 </ul>
     
