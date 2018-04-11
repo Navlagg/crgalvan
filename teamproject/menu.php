@@ -187,7 +187,7 @@ include '../dbConnection.php';
                 echo "<tr><td> </td>" . "<td>Item</td>" . "<td> Price </td>" . "<td> Image </td></tr>" ;
         foreach ($records as $record)
         {
-            echo "<tr><td>". "<input type='checkbox' name='cartt[]'   value =" . $record['name'] . "> </td>" ;
+            echo "<tr><td>". "<input type='submit' name='cartt' value ='".$record['name']."'> </td>" ;
             echo "<td>" .$record['name']. "</td><td>" .$record['price']. "</td><td><img src='img/sanwiches/".$record['name'].".jpg'/></td></tr>";
         }
         
@@ -229,7 +229,7 @@ include '../dbConnection.php';
                 echo "<tr><td> </td>" . "<td>Item</td>" . "<td> Price </td>" . "<td> Image </td></tr>" ;
         foreach ($records as $record)
         {
-            echo "<tr><td>". "<input type='checkbox' name='cartt[]'   value =" . $record['name'] . "> </td>" ;
+            echo "<tr><td>". "<input type='submit' name='cartt' value ='".$record['name']."'> </td>" ;
             echo "<td>" .$record['name']. "</td><td>" .$record['price']. "</td><td><img src='img/Vegetarian/".$record['name'].".jpg'/></td></tr>";
         }
         
