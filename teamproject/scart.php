@@ -1,6 +1,6 @@
 <?php
 session_start();
-include '../includes/dbConnection.php';
+include '../dbConnection.php';
 
 $dbConn = getDatabaseConnection('bakery');
 $sql= "SELECT price FROM allitems WHERE name= ";
@@ -19,7 +19,7 @@ echo "<!DOCTYPE html>
 <ul class='topnav'>
   <li> <a href='index.php'>Home </a> </li>
    <li> <a href='menu.php'>Menu </a>  </li>
- 
+        <li> <a href='trello.php'>Trello </a>  </li>
 
 </ul>";
 echo "<ul>

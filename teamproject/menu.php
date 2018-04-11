@@ -255,7 +255,7 @@ include '../dbConnection.php';
 <ul class="topnav">
   <li> <a href="index.php">Home </a> </li>
    <li> <a href="menu.php">Menu </a>  </li>
-   
+       <li> <a href="trello.php">Trello </a>  </li>
 
 </ul>
     

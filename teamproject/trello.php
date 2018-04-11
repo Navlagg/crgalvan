@@ -14,11 +14,10 @@
     <li> <a href="trello.php">Trello </a>  </li>
 </ul>
     
-    <h2>Thank you for visiting our site! Take a look at our handmade products in the Menu section</h2>
+    <h1>Trello Site</h1>
     
-    <img src="img/pic1.jpg" />
+   <h2> <a href="https://trello.com/b/JIiAIV9w/bakery-336">Trello</a></h2>
     
-     <div style="visibility:hidden">
 
     
     </br>
