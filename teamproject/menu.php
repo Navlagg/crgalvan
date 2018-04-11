@@ -1,5 +1,5 @@
 <?php
-include '../includes/dbConnection.php';
+include '../dbConnection.php';
     
     session_start();
     if(!isset($_SESSION["cart"]))
