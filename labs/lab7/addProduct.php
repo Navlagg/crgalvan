@@ -1,4 +1,9 @@
 <?php
+session_start();
+if(!isset( $_SESSION['adminName']))
+{
+  header("Location:index.php");
+}
 include "../../dbConnection.php";
 $conn = getDatabaseConnection("ottermart");
 
@@ -33,7 +38,7 @@ if (isset($_GET['submitProduct'])) {
     $namedParameters[':price'] = $productPrice;
     $namedParameters[':catId'] = $catId;
      $statement = $conn->prepare($sql);
-    $statement->execute();
+    $statement->execute($namedParameters);
 }
 ?>
 <!DOCTYPE html>
