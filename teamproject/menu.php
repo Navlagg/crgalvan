@@ -1,6 +1,5 @@
 <?php
-
-include '../dbConnection.php';
+include '../includes/dbConnection.php';
     
     session_start();
     if(!isset($_SESSION["cart"]))
@@ -38,7 +37,6 @@ include '../dbConnection.php';
       $records = $statement->fetchALL(PDO::FETCH_ASSOC);  
       
  
-
     }
     
     function getPanDulce()
@@ -48,8 +46,13 @@ include '../dbConnection.php';
         $sql = "SELECT * FROM
             Bread ORDER BY bread";
         
-        if (isset($_GET['nameSort']))
-            $sql = "SELECT * FROM Bread ORDER BY bread";
+        if (isset($_GET['nameSort'])){
+            if($_GET['nameSort'] == "ascending"){
+                $sql = "SELECT * FROM Bread ORDER BY bread ASC";
+            } else {
+                $sql = "SELECT * FROM Bread ORDER BY bread DESC";
+            }
+        }
             
         if (isset($_GET['sort']))
             $sql = "SELECT * FROM Bread ORDER BY price";
@@ -59,12 +62,10 @@ include '../dbConnection.php';
         $pan = $statement->fetchAll(PDO::FETCH_ASSOC);
         
        
-
         echo "<form >";
         echo "<table align='center'>";
         
         echo "<tr><td> </td>" . "<td>Item</td>" . "<td> Price </td>" . "<td> Image </td></tr>" ;
-
         
         foreach ($pan as $bread)
         {
@@ -77,7 +78,6 @@ include '../dbConnection.php';
         
         
         
-
         
     }
     function getPastries()
@@ -89,8 +89,13 @@ include '../dbConnection.php';
                 FROM pastries
                 ORDER BY name";
                 
-        if (isset($_GET['nameSort']))
-            $sql = "SELECT * FROM pastries ORDER BY name";
+        if (isset($_GET['nameSort'])){
+            if($_GET['nameSort'] == "ascending"){
+                $sql = "SELECT * FROM pastries ORDER BY name ASC";
+            } else {
+                $sql = "SELECT * FROM pastries ORDER BY name DESC";
+            }
+        }
         
         if (isset($_GET['sort']))
             $sql = "SELECT * FROM pastries ORDER BY price";
@@ -103,8 +108,6 @@ include '../dbConnection.php';
         echo "<table align='center'>";
         
                 echo "<tr><td> </td>" . "<td>Item</td>" . "<td> Price </td>" . "<td> Image </td></tr>" ;
-
-
         foreach ($records as $record)
         {
             echo "<tr><td>". "<input type='submit' name='cartt'  value =" . $record['name'] . "> </td>" ;
@@ -114,7 +117,6 @@ include '../dbConnection.php';
         echo "</table>";
         echo "</form>";
         
-
         
     }
     
@@ -126,8 +128,13 @@ include '../dbConnection.php';
                 FROM drinks
                 ORDER BY name";
                 
-        if (isset($_GET['nameSort']))
-            $sql = "SELECT * FROM drinks ORDER BY name";
+        if (isset($_GET['nameSort'])){
+            if($_GET['nameSort'] == "ascending"){
+                $sql = "SELECT * FROM drinks ORDER BY name ASC";
+            } else {
+                $sql = "SELECT * FROM drinks ORDER BY name DESC";
+            }
+        }
         
         if (isset($_GET['sort']))
             $sql = "SELECT * FROM drinks ORDER BY price";
@@ -140,7 +147,6 @@ include '../dbConnection.php';
         echo "<table align='center'>";
         
                 echo "<tr><td> </td>" . "<td>Item</td>" . "<td> Price </td>" . "<td> Image </td></tr>" ;
-
         
         foreach ($records as $record)
         {
@@ -150,8 +156,87 @@ include '../dbConnection.php';
         
         echo "</table>";
         echo "</form>";
-
-      
+}
+      function getSandwich()
+    {
+        global $dbConn;
+        
+        $sql = "SELECT * 
+                FROM sandwich
+                ORDER BY name";
+                
+        if (isset($_GET['nameSort'])){
+            if($_GET['nameSort'] == "ascending"){
+                $sql = "SELECT * FROM sandwich ORDER BY name ASC";
+            } else {
+                $sql = "SELECT * FROM sandwich ORDER BY name DESC";
+            }
+        }
+          
+        
+        if (isset($_GET['sort']))
+            $sql = "SELECT * FROM sandwich ORDER BY price";   
+            
+        $statement = $dbConn->prepare($sql);
+        $statement->execute();
+        $records = $statement->fetchAll(PDO::FETCH_ASSOC);
+        
+        echo "<form>";
+        echo "<table align='center'>";
+        
+                echo "<tr><td> </td>" . "<td>Item</td>" . "<td> Price </td>" . "<td> Image </td></tr>" ;
+        foreach ($records as $record)
+        {
+            echo "<tr><td>". "<input type='checkbox' name='cartt[]'   value =" . $record['name'] . "> </td>" ;
+            echo "<td>" .$record['name']. "</td><td>" .$record['price']. "</td><td><img src='img/sanwiches/".$record['name'].".jpg'/></td></tr>";
+        }
+        
+        echo "</table>";
+        echo "</form>";
+        
+        foreach($records as $record) {
+          echo "<input type='checkbox' name='cartt[]'    value =" . $record['name'] . ">";
+          echo $record['name'] . " - ". $record['price'] . "<br/> ";
+      }
+    }
+    
+        function getVegetarian()
+    {
+        global $dbConn;
+        
+        $sql = "SELECT * 
+                FROM vegetarian
+                ORDER BY name";
+        
+        if (isset($_GET['nameSort'])){
+            if($_GET['nameSort'] == "ascending"){
+                $sql = "SELECT * FROM vegetarian ORDER BY name ASC";
+            } else {
+                $sql = "SELECT * FROM vegetarian ORDER BY name DESC";
+            }
+        }
+         
+         
+        if (isset($_GET['sort']))
+            $sql = "SELECT * FROM vegetarian ORDER BY price";    
+            
+        $statement = $dbConn->prepare($sql);
+        $statement->execute();
+        $records = $statement->fetchAll(PDO::FETCH_ASSOC);
+        
+        echo "<form>";
+        echo "<table align='center'>";
+                echo "<tr><td> </td>" . "<td>Item</td>" . "<td> Price </td>" . "<td> Image </td></tr>" ;
+        foreach ($records as $record)
+        {
+            echo "<tr><td>". "<input type='checkbox' name='cartt[]'   value =" . $record['name'] . "> </td>" ;
+            echo "<td>" .$record['name']. "</td><td>" .$record['price']. "</td><td><img src='img/Vegetarian/".$record['name'].".jpg'/></td></tr>";
+        }
+        
+        echo "</table>";
+        echo "</form>";
+        
+    
     }
     
 ?>
@@ -170,7 +255,7 @@ include '../dbConnection.php';
 <ul class="topnav">
   <li> <a href="index.php">Home </a> </li>
    <li> <a href="menu.php">Menu </a>  </li>
-   <li> <a href="location.php" > Location </a> </li>
+   
 
 </ul>
     
@@ -187,7 +272,8 @@ include '../dbConnection.php';
             </select>
             
             </br>
-           Order Alphebetically: <input type="checkbox" name="nameSort">
+           Order Alphebetically: <input type="radio" name="nameSort" value="ascending">
+           Order Reverse Alphebetically: <input type="radio" name="nameSort" value="descending">
             </br>
             Order by price: <input type="checkbox" name="sort">
             </br>
