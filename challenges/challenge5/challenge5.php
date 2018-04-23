@@ -2,36 +2,45 @@
     session_start();
     $go = false;
     if(!isset($_GET['guessnum'])){
+        echo "done";
         $_SESSION['random_numbers'] = rand(1, 10);
          $correct = false;
          $counttries = 0;
          
     }
-    echo $_SESSION['random_numbers'];
+    
+    
     
    
     if(!empty($_GET['guess'])){
         if($_GET['guess'] == $_SESSION['random_numbers']){
             $correct = true;
             $go = true;
+            
         }
         else{
             $correct = false;
-            $counttries++;
+            $counttries = $counttries + 1;
             $go = true;
         }
     }
+    
+    function reset(){
+      $_SESSION['random_numbers'] = rand(1, 10);
+      $counttries = 0;
+    }
     function check($correct){
-        echo "done";
+        
         if($correct == true){
         echo "<p style='color:green;'>You've guessed the number</p>";
+            reset();
         }
-        if($random_numbers < $_GET['guess'] && $correct == false){
+        if($_SESSION['random_numbers']  < $_GET['guess'] && $correct == false){
             echo "<p style='color:red;'>The number should be lower.</p>";
         }
         
-        if($random_numbers > $_GET['guess'] && $correct == false){
-            echo "<p style='color:red;'>The number should be false.</p>";
+        if($_SESSION['random_numbers']  > $_GET['guess'] && $correct == false){
+            echo "<p style='color:red;'>The number should be higher.</p>";
         }
             
         
@@ -54,7 +63,7 @@
         </form>
         
         <br /><br />
-        <?php if(isset($_GET['guessnum'])){echo " Number of tries: " . $counttries; } ?>
+        <?php if(isset($_GET['guessnum'])){echo " Number of tries: "; if (empty($counttries)){echo "0";} else{echo $counttries;} } ?>
         <br />
         <?php if($go == true){ check($correct); }?>
         

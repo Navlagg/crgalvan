@@ -39,9 +39,8 @@
 
     if (empty($record)) {
         
-        //echo "Wrong username or password!";
-        $_SESSION['wrong'] = "Wrong username and/or password";
-        header("Location:index.php");
+        echo "Wrong username or password!";
+        
     } else {
         
         
