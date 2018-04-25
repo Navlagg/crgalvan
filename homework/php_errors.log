@@ -5,3 +5,26 @@
 [14-Mar-2018 04:42:44 UTC] PHP Parse error:  syntax error, unexpected '$_SESSION' (T_VARIABLE), expecting ',' or ';' in /home/ubuntu/workspace/crgalvan/homework/homework3/index.php on line 21
 [14-Mar-2018 05:15:27 UTC] PHP Parse error:  syntax error, unexpected ')', expecting ',' or ';' in /home/ubuntu/workspace/crgalvan/homework/homework3/index.php on line 131
 [14-Mar-2018 05:16:54 UTC] PHP Parse error:  syntax error, unexpected '}', expecting ',' or ';' in /home/ubuntu/workspace/crgalvan/homework/homework3/index.php on line 131
+[23-Apr-2018 21:49:26 UTC] PHP Warning:  include(../../includes/dbConnection.php): failed to open stream: No such file or directory in /home/ubuntu/workspace/crgalvan/homework/homework5/main.php on line 2
+[23-Apr-2018 21:49:26 UTC] PHP Stack trace:
+[23-Apr-2018 21:49:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/crgalvan/homework/homework5/index.php:0
+[23-Apr-2018 21:49:26 UTC] PHP   2. include() /home/ubuntu/workspace/crgalvan/homework/homework5/index.php:2
+[23-Apr-2018 21:49:26 UTC] PHP Warning:  include(): Failed opening '../../includes/dbConnection.php' for inclusion (include_path='.:/usr/share/php:/usr/share/pear') in /home/ubuntu/workspace/crgalvan/homework/homework5/main.php on line 2
+[23-Apr-2018 21:49:26 UTC] PHP Stack trace:
+[23-Apr-2018 21:49:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/crgalvan/homework/homework5/index.php:0
+[23-Apr-2018 21:49:26 UTC] PHP   2. include() /home/ubuntu/workspace/crgalvan/homework/homework5/index.php:2
+[23-Apr-2018 21:49:26 UTC] PHP Fatal error:  Call to undefined function getDatabaseConnection() in /home/ubuntu/workspace/crgalvan/homework/homework5/main.php on line 3
+[23-Apr-2018 21:49:26 UTC] PHP Stack trace:
+[23-Apr-2018 21:49:26 UTC] PHP   1. {main}() /home/ubuntu/workspace/crgalvan/homework/homework5/index.php:0
+[23-Apr-2018 21:49:26 UTC] PHP   2. include() /home/ubuntu/workspace/crgalvan/homework/homework5/index.php:2
+[23-Apr-2018 21:51:19 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ottermart.users' doesn't exist' in /home/ubuntu/workspace/crgalvan/homework/homework5/main.php:12
+Stack trace:
+#0 /home/ubuntu/workspace/crgalvan/homework/homework5/main.php(12): PDOStatement->execute()
+#1 /home/ubuntu/workspace/crgalvan/homework/homework5/index.php(25): checkLogin()
+#2 {main}
+  thrown in /home/ubuntu/workspace/crgalvan/homework/homework5/main.php on line 12
+[23-Apr-2018 22:13:54 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'ottermart.scores' doesn't exist' in /home/ubuntu/workspace/crgalvan/homework/homework5/postScore.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/crgalvan/homework/homework5/postScore.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/crgalvan/homework/homework5/postScore.php on line 14
