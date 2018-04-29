@@ -1,3 +1,7 @@
+<?php
+
+
+?>
 <!DOCTYPE html>
 <html>
     <head>
@@ -5,14 +9,70 @@
         <title>AJAX: Sign Up Page</title>
 
         <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
         <script>
         
             function validateForm() {
-                
-                return false;
-           
+                var ready = false;
+                usercheck = false;
+                passcheck = false;
+                zipcheck = false; 
+                phonecheck = false;
+                lastnamecheck = false;
+                firstnamecheck = false; 
+                emailcheck = false;
+                if(!$("#email").empty()){
+                    var emailcheck = validateEmail($("#email").val());
+                }
+                if(!$("#firstname").empty()){
+                    var firstnamecheck = checkname($("#firstname").val());
+                }
+                if(!$("#lastname").empty()){
+                    var lastnamecheck = checkname($("#lastname").val());
+                }  
+                if(!$("#phone").empty()){
+                    var phonecheck = checkPhone($("#phone").val());
+                } 
+                if(!$("#zipCode").empty()){
+                    var zipcheck = false;
+                } 
+                if(!$("#username").empty()){
+                    var usercheck = checkUser($("#username").val());
+                }
+                if(!$("#origpass").empty() && !$("#retypepass").empty()){
+                    var passcheck = checkPass($("#origpass").val());
+                }
+                if(usercheck != false && passcheck != false && zipcheck != false && phonecheck != false && lastnamecheck != false &&firstnamecheck != false && emailcheck != false){
+                   
+                    return true;
+                        
+                }
+                else {
+                    return false;
+                }
             }
-            
+        function validateEmail(email) {
+                    var re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                    return re.test(String(email).toLowerCase());
+                }
+        function checkname(name){
+            var re = /^([^0-9]*)$/
+            return re.test(String(name.toLowerCase()));
+        }
+        function checkPhone(phone){
+            var re = /^[\+]?[(]?[0-9]{3}[)]?[-\s\.]?[0-9]{3}[-\s\.]?[0-9]{4,6}$/im
+            return re.test(String(phone.toLowerCase()));
+        }
+         function checkUser(user){
+            var re =  /^[-\w\.\$@\*\!]{1,8}$/
+            return re.test(String(user.toLowerCase()));
+        }
+        function checkPass(pass){
+            var re =  /^[-\w\.\$@\*\!]{1,40}$/
+            return re.test(String(pass.toLowerCase()));
+        }
+       
         </script>
         
         <script>
@@ -21,6 +81,48 @@
             $(document).ready( function(){
                 
                 //EVENTS
+                $("#retypepass").change(function() {
+                    if($("#origpass").val() != $("#retypepass").val()){
+                       
+                        $("#passError").html("Passwords do not match");
+                        $("#passError").css("color", "red");
+                    }
+                    else {
+                       
+                        $("#passError").html(" ");
+                       
+                    }
+                });
+                
+                $("#username").change( function(){ 
+                    //alert( $("#username").val() )
+                    $.ajax({
+
+                    type: "GET",
+                    url: "checkUsernameAPI.php",
+                    dataType: "json",
+                    data: { "username": $("#username").val()},
+                    success: function(data,status) {
+                        //alert(data);
+                        if(!data){
+                            $("#userTaken").html("Username Available!");
+                            $("#userTaken").css("color", "green");
+                            }
+                            else {
+            
+                            $("#userTaken").html("Username is Taken!");
+                            $("#userTaken").css("color", "red");
+        
+                            }
+                    },
+                    complete: function(data,status) { //optional, used for debugging purposes
+                    //alert(status);
+                    }
+                    
+                    });//ajax
+                    
+                });
+                
                 $("#state").change( function () {
                     //alert("hi")
                     //alert( $("#state").val());
@@ -34,7 +136,7 @@
                         success: function(data,status) {
                         //alert(data[0]['county']);
                         //alert(data[0].county);
-                        $("#county").html("<option>"  "</option>");
+                        $("#county").html("<option>Select One</option>");
                         for(var i=0; i<data.length; i++)
                         {
                            $("#county").append("<option>" + data[i].county + "</option>"); 
@@ -59,12 +161,18 @@
                         dataType: "json",
                         data: { "zip": $("#zipCode").val() },
                         success: function(data,status) {
-                        
-                           //alert(data.city);
+                            
+                            if(!data){
+                                $("#zipspan").html("Zip code not found");
+                            $("#zipspan").css("color", "red");
+                            }
+                           else{
                            $("#city").html(data.city);
-                        
-                        },
-                        complete: function(data,status) { //optional, used for debugging purposes
+                            $("#long").html(data.longitude);
+                            $("#lat").html(data.latitude);
+                            $("#zipspan").html(" ");
+                           }
+                        },complete: function(data,status) { //optional, used for debugging purposes
                         //alert(status);
                         }
                         
@@ -80,7 +188,10 @@
         </script>
 
     </head>
-
+    <style>
+        @import url("css/style.css");
+        
+    </style>
     <body>
     
        <h1> Sign Up Form </h1>
@@ -88,16 +199,16 @@
         <form onsubmit="return validateForm()">
             <fieldset>
                <legend>Sign Up</legend>
-                First Name:  <input type="text"><br> 
-                Last Name:   <input type="text"><br> 
-                Email:       <input type="text"><br> 
-                Phone Number:<input type="text"><br><br>
-                Zip Code:    <input type="text" id="zipCode"><br>
+                First Name:  <input type="text" id="firstname"><br> 
+                Last Name:   <input type="text" id="lastname"><br> 
+                Email:       <input type="text" id="email" ><br> 
+                Phone Number:<input type="text" id="phone"><br><br>
+                Zip Code:    <input type="text" id="zipCode"><span id="zipspan"></span><br>
                 City:        <span id="city"></span>
                 <br>
-                Latitude: 
+                Latitude:     <span id="lat"></span>
                 <br>
-                Longitude:
+                Longitude:     <span id="long"></span>
                 <br><br>
                 State:     
                 <select id="state">
@@ -110,15 +221,16 @@
                 
                 Select a County: <select id="county"></select><br>
                 
-                Desired Username: <input type="text"><br>
+                Desired Username: <input id="username" type="text"> <span id="userTaken" class="error"></span> <br />
                 
-                Password: <input type="password"><br>
+                Password: <input type="password" id="origpass"><br>
+               
                 
-                Type Password Again: <input type="password"><br>
-                
-                <input type="submit" value="Sign up!">
+                Type Password Again: <input type="password" id="retypepass"> <span id="passError" class="error"></span> <br>
+                <input type="submit" value="Sign up!"  onclick="check()">
+                 
             </fieldset>
         </form>
-    
+        <span id="added"></span>
     </body>
 </html>

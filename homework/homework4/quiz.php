@@ -11,68 +11,68 @@
         
         <script>
             var id = "<?php echo $_GET['userId']; ?>";
-            var score;
+var score;
             
-            function checkQuiz(){
-                score = 0;
-                
-                if ($("#q1").val().toLowerCase() != "html") {
-                    $("#q1Error").html("Incorrect!");
-                    $("#q1Error").css("color", "red");
-                } else {
-                    score++;
-                    $("#q1Error").html("Correct!");
-                    $("#q1Error").css("color", "green");
-                }
-                
-                if ($('[name="colorPerCell"]:checked').val() != "C++") {
-                    $("#q2Error").html("Incorrect!");
-                    $("#q2Error").css("color", "red");
-                } else {
-                    score++;
-                    $("#q2Error").html("Correct!");
-                    $("#q2Error").css("color", "green");
-                }
-                
-                if ($("#q3").val() != "none") {
-                    $("#q3Error").html("Incorrect!");
-                    $("#q3Error").css("color", "red");
-                } else {
-                    score++;
-                    $("#q3Error").html("Correct!");
-                    $("#q3Error").css("color", "green");
-                }
-                
-                if ($('#q41').is(":checked") == true && $('#q43').is(":checked") == true && $('#q42').is(":checked") == false) {
-                    score++;
-                    $("#q4Error").html("Correct!");
-                    $("#q4Error").css("color", "green");
-                } else {
-                    $("#q4Error").html("Incorrect!");
-                    $("#q4Error").css("color", "red");
-                }
-                
-                if ($("#q5").val() != "7") {
-                    $("#q5Error").html("Incorrect!");
-                    $("#q5Error").css("color", "red");
-                } else {
-                    score++;
-                    $("#q5Error").html("Correct!");
-                    $("#q5Error").css("color", "green");
-                }
-                
-                $.ajax({
-                    type: "GET",
-                    url: 'postScore.php?userId=' + id + "&score=" + score,
-                    success: function (response) {//response is value returned from php (for your example it's "bye bye"
-                        alert(response);
-                    }
-                });
-                
-                $("#result").html("Score: " + score + " / 5");
-                
-                return score;
+    function checkQuiz(){
+        score = 0;
+        
+        if ($("#q1").val().toLowerCase() != "html") {
+            $("#q1Error").html("Incorrect!");
+            $("#q1Error").css("color", "red");
+        } else {
+            score++;
+            $("#q1Error").html("Correct!");
+            $("#q1Error").css("color", "green");
+        }
+        
+        if ($('[name="colorPerCell"]:checked').val() != "C++") {
+            $("#q2Error").html("Incorrect!");
+            $("#q2Error").css("color", "red");
+        } else {
+            score++;
+            $("#q2Error").html("Correct!");
+            $("#q2Error").css("color", "green");
+        }
+        
+        if ($("#q3").val() != "none") {
+            $("#q3Error").html("Incorrect!");
+            $("#q3Error").css("color", "red");
+        } else {
+            score++;
+            $("#q3Error").html("Correct!");
+            $("#q3Error").css("color", "green");
+        }
+        
+        if ($('#q41').is(":checked") == true && $('#q43').is(":checked") == true && $('#q42').is(":checked") == false) {
+            score++;
+            $("#q4Error").html("Correct!");
+            $("#q4Error").css("color", "green");
+        } else {
+            $("#q4Error").html("Incorrect!");
+            $("#q4Error").css("color", "red");
+        }
+        
+        if ($("#q5").val() != "7") {
+            $("#q5Error").html("Incorrect!");
+            $("#q5Error").css("color", "red");
+        } else {
+            score++;
+            $("#q5Error").html("Correct!");
+            $("#q5Error").css("color", "green");
+        }
+        
+        $.ajax({
+            type: "GET",
+            url: 'postScore.php?userId=' + id + "&score=" + score,
+            success: function (response) {//response is value returned from php (for your example it's "bye bye"
+                alert(response);
             }
+        });
+        
+        $("#result").html("Score: " + score + " / 5");
+        
+        return score;
+    }
         </script>
         
         <style>

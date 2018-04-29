@@ -28,3 +28,13 @@ Stack trace:
 #0 /home/ubuntu/workspace/crgalvan/homework/homework5/postScore.php(14): PDOStatement->execute()
 #1 {main}
   thrown in /home/ubuntu/workspace/crgalvan/homework/homework5/postScore.php on line 14
+[25-Apr-2018 21:26:56 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/crgalvan/homework/homework4/postScore.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/crgalvan/homework/homework4/postScore.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/crgalvan/homework/homework4/postScore.php on line 14
+[25-Apr-2018 21:28:58 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[HY093]: Invalid parameter number: no parameters were bound' in /home/ubuntu/workspace/crgalvan/homework/homework4/postScore.php:14
+Stack trace:
+#0 /home/ubuntu/workspace/crgalvan/homework/homework4/postScore.php(14): PDOStatement->execute()
+#1 {main}
+  thrown in /home/ubuntu/workspace/crgalvan/homework/homework4/postScore.php on line 14
