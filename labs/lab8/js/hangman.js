@@ -2,7 +2,9 @@
     var selectedHint = ""; 
     var board = ""; 
     var remainingGuesses = 6; 
-    var words = ["snake", "monkey", "beetle"]; 
+    var words = [{word: "snake", hint: "It's a reptile" },
+                 {word: "monkey", hint: "It's a mammal" },
+                 {word: "beetle", hint: "It's an insect" }]; 
     
     console.log(words[0]); 
     
@@ -10,7 +12,8 @@
     
     function pickWord() {
         var randomIndex = Math.floor(Math.random() * words.length);
-        selectedWord = words[randomIndex].toUpperCase();
+        selectedWord = words[randomIndex].word.toUpperCase();
+        selectedHint = words[randomIndex].hint;
     }
      
     
@@ -42,6 +45,10 @@
             //document.getElementById("word").innerHTML += letter + " "; 
             $("#word").append(letter + " "); 
         }
+        $("#word").append("<br /> "); 
+        
+        
+        
     }
     
     
@@ -54,10 +61,17 @@
         for (var letter of alphabet) {
             $('#letters').append("<button class='letter-btn' id='" + letter + "'>" + letter + "</button>");
         }
-        
+        $('#hintdiv').append("<button id='hintbtn'>Hint</button>");
+         $(document).on("click", "#hintbtn", function(){
+            
+            $("#hintdiv").append("<span class='hint'>Hint: " + selectedHint + "</span>"); 
+             $(this).hide();
+                $("#hidden-div").show();
+        });
         $('.letter-btn').click(function(){
-            checkLetter($(this).attr("id"))
-        })
+            checkLetter($(this).attr("id"));
+            disableButton($(this));
+        });
          
 
     }
@@ -122,5 +136,8 @@
     function replaceAt(str, index, value) {
         return str.substr(0, index) + value + str.substr(index + value.length); 
     }
-    
+    function disableButton(btn){
+        btn.prop("disabled",true);
+        btn.attr("class", "btn btn-danger")
+    }
     

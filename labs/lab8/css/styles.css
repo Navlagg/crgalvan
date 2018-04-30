@@ -3,12 +3,14 @@
     padding-left: 200px;
 }
 
-#word, #letters, #won, #lost {
+#hintdiv, #word, #letters, #won, #lost {
     padding: 20px 0px;
     padding-left: 200px;
     text-align: center;
 }
-
+#hintdiv{
+    margin:0 auto;
+}
 h1,h2,h4
 {
     text-align: center;
@@ -25,7 +27,7 @@ h1,h2,h4
     padding-left: 200px;
 }
 
-#word {
+#word, #hintdiv {
     font-size: 1.8em;
 }
 
