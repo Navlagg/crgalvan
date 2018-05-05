@@ -4,7 +4,7 @@
 
       $conn = getDatabaseConnection('pets');
       
-      $sql = "SELECT * FROM pets WHERE id = :id";
+      $sql = "SELECT *, YEAR(CURDATE()) - yob age FROM pets WHERE id = :id";
       
       $stmt = $conn->prepare($sql);  
       $stmt->execute(array(":id"=>$_GET['id']));

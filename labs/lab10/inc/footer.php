@@ -1,3 +1,3 @@
         <hr>
         <strong>Disclaimer:</strong> All information in this website is fake. <br />
-        &copy;2018 Miguel Lara
+        &copy;2018 Cristian Galvan
