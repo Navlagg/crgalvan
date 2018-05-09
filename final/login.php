@@ -135,10 +135,10 @@
         <h1> <b> Welcome to La Conchita! </b></h1>
         <h2>Admin Sign in</h2>
         <form onsubmit= "validateForm()" action = "processLogin.php" method="POST">
-            Username: <input type="text" id="username"/>
+            Username: <input type="text" name="username" id="username"/>
                     <span id="usernameError" class="error"> </span>
                      <br />
-            Password: <input type="password" id="password" />
+            Password: <input type="password" id="password" name="password"/>
                     <span id="passwordError" class="error"> </span><br />
             
             <input type="submit" name="loginForm" />
