@@ -36,8 +36,8 @@
                            
                             }
                          else{
-                             $("#usernameError").html("Incorrect username!");
-                            $("#usernameError").css("color", "red");
+                             $("#usernameError").html(" ");
+                          
                          }
                     },
                     complete: function(data,status) { //optional, used for debugging purposes
@@ -48,16 +48,17 @@
              });
                     
                     $("#password").change( function(){ 
+                         var pass1 = document.getElementById("#password").value;
                     //alert( $("#username").val() )
                        
                             //alert(data);
-                            if($("#password") == "secret"){
+                            if(pass1 != "secret"){
                                 $("#passwordError").html("Wrong password!");
                                 $("#passwordError").css("color", "red");
                                
                                 }
                                 else{
-                                    $("#passwordError").html("asd");
+                                    $("#passwordError").html(" ");
                                     alert($("#password"))
 
                                 }
