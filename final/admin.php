@@ -367,7 +367,7 @@ include '../dbConnection.php';
             <br />
             <br />
         <form action="logout.php">
-        <button type="submit" name = "logout">Sign out</button>
+        <button type="submit" name = "logout">Logout</button>
     </form>
                 
     </div>    
