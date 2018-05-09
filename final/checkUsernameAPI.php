@@ -6,7 +6,7 @@ $username = $_POST['username'];
 
 //sql injection because of single quotes
 //$sql = "SELECT * FROM lab9_user WHERE username = '$username'";
-$sql = "SELECT * FROM lab9_user WHERE username = :username";
+$sql = "SELECT * FROM admin WHERE username = :username";
 
 
 $stmt = $conn->prepare($sql);
