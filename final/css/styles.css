@@ -19,32 +19,8 @@ table, tr, td
 #guestLogin, #loginForm{
     color:black;
 }
-.btn , submit{
-  background: #d0e4f2;
-  background-image: -webkit-linear-gradient(top, #d0e4f2, #3b3b3b);
-  background-image: -moz-linear-gradient(top, #d0e4f2, #3b3b3b);
-  background-image: -ms-linear-gradient(top, #d0e4f2, #3b3b3b);
-  background-image: -o-linear-gradient(top, #d0e4f2, #3b3b3b);
-  background-image: linear-gradient(to bottom, #d0e4f2, #3b3b3b);
-  -webkit-border-radius: 28;
-  -moz-border-radius: 28;
-  border-radius: 28px;
-  font-family: Arial;
-  color: #1f1f1f;
-  font-size: 20px;
-  padding: 10px 20px 10px 20px;
-  text-decoration: none;
-}
 
-.btn:hover {
-  background: #000000;
-  background-image: -webkit-linear-gradient(top, #000000, #e0dce0);
-  background-image: -moz-linear-gradient(top, #000000, #e0dce0);
-  background-image: -ms-linear-gradient(top, #000000, #e0dce0);
-  background-image: -o-linear-gradient(top, #000000, #e0dce0);
-  background-image: linear-gradient(to bottom, #000000, #e0dce0);
-  text-decoration: none;
-}
+
 div
 {
     border-radius: 15px 50px;
