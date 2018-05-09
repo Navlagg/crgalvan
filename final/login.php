@@ -94,6 +94,7 @@
     </head>
     <body>
         <div class="container">
+           
         <h1> <b> Welcome to La Conchita! </b></h1>
         <h2>Admin Sign in</h2>
         <form onsubmit= "validateForm()" action = "processLogin.php" method="post">
@@ -114,5 +115,6 @@
     
     <a href="https://drive.google.com/a/csumb.edu/file/d/0B62eYOs-pUc9S2NldGRaT2FjSTA/view?usp=sharing">User Story</a>
 </div>
+
     </body>
 </html>

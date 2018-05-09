@@ -73,12 +73,16 @@ include '../dbConnection.php';
             //echo "<tr><td>". "<input type='text' name='cart'  value =" . $record['name'] . "> </td>" ;
             echo "<tr><td>" .$record['name']. "</td><td>" .$record['catName']. "</td><td>" .$record['companyName']. "</td><td>" .$record['description']. "</td><td>" .$record['price']. "</td></tr>";
         }
-        $sql = "SELECT AVG(price)
-                FROM products";  //Getting all records 
+        $sql = "SELECT AVG(price) avg
+                FROM products
+                WHERE 1";  //Getting all records 
         $statement= $conn->prepare($sql); 
       $statement->execute($namedParameters); //Always pass the named parameters, if any
       $records = $statement->fetchALL(PDO::FETCH_ASSOC);
-         echo "<tr><td><b>Total</td><td></td><td></td><td></td><td>" . $records[0] . "</td></tr>";
+      foreach ($records as $record)
+        {
+         echo "<tr><td><b>Average</td><td></td><td></td><td></td><td>" .  number_format((float)$record['avg'], 2, '.', '') . "</td></tr>";
+        }
         echo "</table>";
         echo "</form>";
 
@@ -201,12 +205,56 @@ include '../dbConnection.php';
     }
     function updateItem(){
         global $conn;
-        $sql = "UPDATE allitems
-                SET price= :price
+        $required = array('item', 'price', 'companyName', 'catName');
+
+            // Loop over field names, make sure each one exists and is not empty
+            $error = false;
+            foreach($required as $field) {
+              if (empty($_POST[$field])) {
+                $error = true;
+              }
+            }
+            
+            if ($error) {
+              echo "All fields are required.";
+              exit;
+            } 
+        $sql = "UPDATE products
+                SET price= :price, catId =:catId, comId=:comId
                 WHERE name = :name;";
         $namedParameters = array();
         $namedParameters[':name']    = $_POST['item'];
-        $namedParameters[':price'] = $_POST['newprice'];
+        $namedParameters[':price'] = $_POST['price'];
+        
+        
+        if($_POST['companyName'] == "Adrian's Panaderia"){
+            $com = 1;
+        } 
+        else if($_POST['companyName'] == "Cristian's Corner"){
+            $com = 2;
+        } 
+        else{
+            $com = 3;
+        }
+        $namedParameters[':comId'] = $com;
+        
+        if($_POST['catName'] == "Bread"){
+            $cat = 1;
+        } 
+        else if($_POST['catName'] == "Drinks"){
+            $cat = 2;
+        } 
+        else if($_POST['catName'] == "Pastries"){
+            $cat = 3;
+        } 
+        else if($_POST['catName'] == "Sandwiches"){
+            $cat = 4;
+        } 
+        else{
+            $cat = 5;
+        }
+        
+        $namedParameters[':catId']    = $cat;
         $statement = $conn->prepare($sql);
         $statement->execute($namedParameters);
     }
@@ -233,14 +281,15 @@ include '../dbConnection.php';
     </head>
     <body>
         <div class="container">
+          
                 <h1> <b> Bakery </b></h1>
                 <h2>Welcome Admin</h2>
                 <h1>Admin Tables</h1>
-                <br />Get All Products and Categories in alphabetical order
+                <br /><h2>Get All Products and Categories in alphabetical order</h2>
                 <?=displayAll()?>
-                <br /> Get All Products by Price and Average
+                <br /> <h2>Get All Products by Price and Average</h2>
                 <?=displaybyPrice()?>
-                <br /> Total Price of Store
+                <br /> <h2>Total Price of Store</h2>
                 <?=getTotal()?>
                 
             <h1> Admin Options<h1/>
@@ -251,16 +300,16 @@ include '../dbConnection.php';
         
            
             <form method = "POST">
-                 Item (e.g. Conchitas): <input type='text' name = "item"> <br/>
+                <strong>Item (e.g. Conchitas):</strong> <input type='text' name = "item"> <br/>
                 
-               <select name="companyName"> </h2>
+               <strong>Company:</strong> <select name="companyName"> </h2>
                 <option>Choose one</option>
                 <option>Adrian's Panaderia</option>
                 <option>Cristian's Corner</option>
                 <option>Joshua's Pastries</option>
                 <br />
                 </select>
-               <select name="catName"> </h2>
+               <strong>Category:</strong> <select name="catName"> </h2>
                 <option>Choose one</option>
                 <option>Bread</option>
                 <option>Drinks</option>
@@ -269,8 +318,9 @@ include '../dbConnection.php';
                 <option>Vegetarian</option>
                 <br />
                 </select>
-                Description: <input type='text' name = 'description'><br />
-                Price: <input type='text' name = 'price'><br />
+                <br />
+                <strong>Description:</strong> <input type='text' name = 'description'><br />
+                <strong>Price:</strong> <input type='text' name = 'price'><br />
                 <input type="submit" value="Add Item" name="addItem">
             
                 
@@ -278,7 +328,7 @@ include '../dbConnection.php';
             <br/> <br/>
             <h2>Admin - Delete Item</h2>
             <form method = "POST">
-                Item (e.g. Conchitas): <input type='text' name = "item"> 
+                <strong>Item (e.g. Conchitas):</strong> <input type='text' name = "item"> 
                 <input type="submit" value="Delete Item" name="deleteItem">
                 
             </form>
@@ -286,8 +336,26 @@ include '../dbConnection.php';
             <h2>Admin - Update Item</h2>
             
             <form method = "POST">
-                Item (e.g. Conchitas): <input type='text' name = "item"><br />
-                New Price: <input type='text' name = 'newprice'><br />
+                 <strong>Item (e.g. Conchitas):</strong> <input type='text' name = "item"> <br/>
+                
+               <strong>Company: </strong><select name="companyName"> </h2>
+                <option>Choose one</option>
+                <option>Adrian's Panaderia</option>
+                <option>Cristian's Corner</option>
+                <option>Joshua's Pastries</option>
+                <br />
+                </select>
+               <strong>Category</strong><select name="catName"> </h2>
+                <option>Choose one</option>
+                <option>Bread</option>
+                <option>Drinks</option>
+                <option>Pastries</option>
+                <option>Sandwiches</option>
+                <option>Vegetarian</option>
+                <br />
+                </select>
+                <br />
+                <strong>Price:</strong> <input type='text' name = 'price'><br />
                 <input type="submit" value="Update Item" name="updateItem">
                 
             </form>
@@ -298,5 +366,6 @@ include '../dbConnection.php';
     </form>
                 
     </div>    
+    
     </body>
 </html>

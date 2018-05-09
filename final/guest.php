@@ -368,7 +368,7 @@ session_start();
         
         
         <div class="container">
-        
+      
                 <h1> <b> Bakery </b></h1>
                 <h2>Welcome Guest!</h2>
                 
@@ -460,5 +460,6 @@ session_start();
             <form action="login.php">
         <button type="submit" name = "logout">Sign out</button>
         </div>
+      
     </body>
 </html>

@@ -27,10 +27,9 @@ echo "<!DOCTYPE html>
     </head>
     <body>
     <div class='container'>
+   
         
-                <h1> <b> La Conchita! </b></h1>
-
->";
+                <h1> <b> La Conchita! </b></h1>";
 echo "<ul>
 <h2>";
 $total=0;
@@ -62,5 +61,5 @@ echo "total= ".$total."</h2>";
 <input type='submit' name='clear' value="clear">
 </form>
 </div>
-    
+
 </body>
