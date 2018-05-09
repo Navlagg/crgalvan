@@ -48,23 +48,29 @@
              });
                     
                     $("#password").change( function(){ 
-                         var pass1 = document.getElementById("#password").value;
-                    //alert( $("#username").val() )
-                       
-                            //alert(data);
-                            if(pass1 != "secret"){
-                                $("#passwordError").html("Wrong password!");
-                                $("#passwordError").css("color", "red");
-                               
-                                }
-                                else{
-                                    $("#passwordError").html(" ");
-                                    alert($("#password"))
+                         $.ajax({
 
-                                }
-                        
+                    type: "POST",
+                    url: "checkPasswordAPI.php",
+                    dataType: "json",
+                    data: { "password": $("#password").val()},
+                    success: function(data,status) {
+                        //alert(data);
+                        if(!data){
+                            $("#passwordError").html("Incorrect password!");
+                            $("#passwordError").css("color", "red");
+                           
+                            }
+                         else{
+                             $("#passwordError").html(" ");
+                          
+                         }
+                    },
+                    complete: function(data,status) { //optional, used for debugging purposes
+                    //alert(status);
+                    }
                     
-                } );
+                    });//ajax
                 
              } );
         
