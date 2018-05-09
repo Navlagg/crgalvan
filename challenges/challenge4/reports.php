@@ -33,7 +33,7 @@ $sql4 = "SELECT catName FROM om_purchase p
  $stmt = $dbConn->prepare($sql2);
  $stmt->execute();
  $records = $stmt->fetchall(PDO::FETCH_ASSOC);
- //print_r($records);
+ print_r($records);
  
   echo "<br/><br/>Products bought by users with an AOL account: <br />";
  
