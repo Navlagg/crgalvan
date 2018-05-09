@@ -17,9 +17,9 @@ echo "<!DOCTYPE html>
         <nav class='navbar navbar-inverse'>
   <div class='container-fluid'>
     <ul class='nav navbar-nav'>
-      <li class='active'><a href='guest.php'>Home</a></li>
+      <li><a href='guest.php'>Home</a></li>
       <li><a href='menu.php'>Menu</a></li>
-      <li><a href='scart.php'>Shopping Cart</a></li>
+      <li class='active'><a href='scart.php'>Shopping Cart</a></li>
       <li><a href='logout.php'>Logout</a></li>
     </ul>
   </div>
@@ -29,12 +29,7 @@ echo "<!DOCTYPE html>
         
                 <h1> <b> La Conchita! </b></h1>
 
-
-<ul class='topnav'>
-   <li> <a href='guest.php'>Menu </a>  </li>
-        
-
-</ul>";
+>";
 echo "<ul>
 <h2>";
 $total=0;

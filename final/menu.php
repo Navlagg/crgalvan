@@ -52,8 +52,8 @@ include '../dbConnection.php';
         <nav class="navbar navbar-inverse">
   <div class="container-fluid">
     <ul class="nav navbar-nav">
-      <li class="active"><a href="guest.php">Home</a></li>
-      <li><a href="menu.php">Menu</a></li>
+      <li><a href="guest.php">Home</a></li>
+      <li class='active'><a href="menu.php">Menu</a></li>
       <li><a href="scart.php">Shopping Cart</a></li>
       <li><a href="logout.php">Logout</a></li>
     </ul>
