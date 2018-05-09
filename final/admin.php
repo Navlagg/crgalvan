@@ -6,7 +6,24 @@ include '../dbConnection.php';
     
     $conn = getDatabaseConnection('finalproject');
     
-    
+     function displayItems(){
+        global $conn;
+        
+        $sql = "SELECT productId, name FROM `products` ORDER BY productId";
+        
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+        $records = $stmt->fetchAll(PDO::FETCH_ASSOC);
+        
+        //print_r($records);
+        
+        foreach ($records as $record) {
+            
+            echo "<option value='".$record["productId"]."' >" . $record["name"] . "</option>";
+            
+        }
+        
+    }
     function displayAll()
     {
     global $conn;
@@ -220,9 +237,10 @@ include '../dbConnection.php';
               exit;
             } 
         $sql = "UPDATE products
-                SET price= :price, catId =:catId, comId=:comId
-                WHERE name = :name;";
+                SET price= :price, catId =:catId, comId=:comId, name =:name
+                WHERE productId = :itemId";
         $namedParameters = array();
+        $namedParameters[':itemId'] = $_POST['itemName'];
         $namedParameters[':name']    = $_POST['item'];
         $namedParameters[':price'] = $_POST['price'];
         
@@ -341,7 +359,12 @@ include '../dbConnection.php';
             <h2>Admin - Update Item</h2>
             
             <form method = "POST">
-                 <strong>Item (e.g. Conchitas):</strong> <input type='text' name = "item"> <br/>
+                <strong>Choose Item: </strong> <select name="itemName">
+                    <option value=""> Select One </option>
+                    <?=displayItems()?>
+                </select>
+                <br />
+                 <strong>New Item Name (e.g. Conchitas):</strong> <input type='text' name = "item"> <br/>
                 
                <strong>Company: </strong><select name="companyName"> </h2>
                 <option>Choose one</option>

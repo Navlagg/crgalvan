@@ -112,3 +112,50 @@ Stack trace:
 #1 /home/ubuntu/workspace/crgalvan/final/admin.php(262): updateItem()
 #2 {main}
   thrown in /home/ubuntu/workspace/crgalvan/final/admin.php on line 259
+[09-May-2018 22:42:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'finalproject.lab9_user' doesn't exist' in /home/ubuntu/workspace/crgalvan/final/checkUsernameAPI.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/crgalvan/final/checkUsernameAPI.php(13): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/crgalvan/final/checkUsernameAPI.php on line 13
+[09-May-2018 22:42:38 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'finalproject.lab9_user' doesn't exist' in /home/ubuntu/workspace/crgalvan/final/checkUsernameAPI.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/crgalvan/final/checkUsernameAPI.php(13): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/crgalvan/final/checkUsernameAPI.php on line 13
+[09-May-2018 22:42:45 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'finalproject.lab9_user' doesn't exist' in /home/ubuntu/workspace/crgalvan/final/checkUsernameAPI.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/crgalvan/final/checkUsernameAPI.php(13): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/crgalvan/final/checkUsernameAPI.php on line 13
+[09-May-2018 22:45:01 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'finalproject.lab9_user' doesn't exist' in /home/ubuntu/workspace/crgalvan/final/checkUsernameAPI.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/crgalvan/final/checkUsernameAPI.php(13): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/crgalvan/final/checkUsernameAPI.php on line 13
+[09-May-2018 22:45:56 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'finalproject.lab9_user' doesn't exist' in /home/ubuntu/workspace/crgalvan/final/checkUsernameAPI.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/crgalvan/final/checkUsernameAPI.php(13): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/crgalvan/final/checkUsernameAPI.php on line 13
+[09-May-2018 22:48:03 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'finalproject.lab9_user' doesn't exist' in /home/ubuntu/workspace/crgalvan/final/checkUsernameAPI.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/crgalvan/final/checkUsernameAPI.php(13): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/crgalvan/final/checkUsernameAPI.php on line 13
+[09-May-2018 22:48:36 UTC] PHP Fatal error:  Uncaught exception 'PDOException' with message 'SQLSTATE[42S02]: Base table or view not found: 1146 Table 'finalproject.lab9_user' doesn't exist' in /home/ubuntu/workspace/crgalvan/final/checkUsernameAPI.php:13
+Stack trace:
+#0 /home/ubuntu/workspace/crgalvan/final/checkUsernameAPI.php(13): PDOStatement->execute(Array)
+#1 {main}
+  thrown in /home/ubuntu/workspace/crgalvan/final/checkUsernameAPI.php on line 13
+[09-May-2018 23:30:37 UTC] PHP Fatal error:  Call to undefined function displayItems() in /home/ubuntu/workspace/crgalvan/final/admin.php on line 364
+[09-May-2018 23:30:37 UTC] PHP Stack trace:
+[09-May-2018 23:30:37 UTC] PHP   1. {main}() /home/ubuntu/workspace/crgalvan/final/admin.php:0
+[09-May-2018 23:32:27 UTC] PHP Fatal error:  Call to undefined function displayItems() in /home/ubuntu/workspace/crgalvan/final/admin.php on line 364
+[09-May-2018 23:32:27 UTC] PHP Stack trace:
+[09-May-2018 23:32:27 UTC] PHP   1. {main}() /home/ubuntu/workspace/crgalvan/final/admin.php:0
+[09-May-2018 23:33:50 UTC] PHP Fatal error:  Call to undefined function displayItems() in /home/ubuntu/workspace/crgalvan/final/admin.php on line 364
+[09-May-2018 23:33:50 UTC] PHP Stack trace:
+[09-May-2018 23:33:50 UTC] PHP   1. {main}() /home/ubuntu/workspace/crgalvan/final/admin.php:0
+[09-May-2018 23:33:54 UTC] PHP Fatal error:  Call to undefined function displayItems() in /home/ubuntu/workspace/crgalvan/final/admin.php on line 364
+[09-May-2018 23:33:54 UTC] PHP Stack trace:
+[09-May-2018 23:33:54 UTC] PHP   1. {main}() /home/ubuntu/workspace/crgalvan/final/admin.php:0
