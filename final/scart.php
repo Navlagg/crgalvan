@@ -9,6 +9,7 @@ echo "<!DOCTYPE html>
     <head>
          <meta charset='utf-8'>
   <meta name='viewport' content='width=device-width, initial-scale=1'>
+   <link rel='stylesheet' href='css/styles.css' type='text/css' />
   <link rel='stylesheet' href='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css'>
   <script src='https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js'></script>
   <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
@@ -25,7 +26,7 @@ echo "<!DOCTYPE html>
   </div>
     </head>
     <body>
-    
+    <div class='container'>
         
                 <h1> <b> La Conchita! </b></h1>
 
@@ -60,6 +61,6 @@ echo "total= ".$total."</h2>";
 <form>
 <input type='submit' name='clear' value="clear">
 </form>
-
+</div>
     
 </body>
