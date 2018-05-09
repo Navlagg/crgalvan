@@ -365,10 +365,6 @@ include '../dbConnection.php';
                 
             </form>
             <br />
-            <br />
-        <form action="logout.php">
-        <button type="submit" name = "logout">Logout</button>
-    </form>
                 
     </div>    
     

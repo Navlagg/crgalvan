@@ -112,8 +112,7 @@
         <h2>Guest Sign In:</h2>
         <button type="submit" name = "guestLogin">Guest</button>
     </form>
-    
-    <a href="https://drive.google.com/a/csumb.edu/file/d/0B62eYOs-pUc9S2NldGRaT2FjSTA/view?usp=sharing">User Story</a>
+   
 </div>
 
     </body>
