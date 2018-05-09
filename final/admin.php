@@ -187,7 +187,7 @@ include '../dbConnection.php';
         
         global $conn; 
         
-        $sql = "DELETE FROM allitems
+        $sql = "DELETE FROM products
                 WHERE name= :name"; 
                  
         $namedParameters = array();
