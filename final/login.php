@@ -68,7 +68,57 @@
                 
              } );
         
-       
+       function validateForm(){
+            
+            var isValid = true;
+            $("#usernameError").html("");
+            //alert( $("#firstName").val()  );
+            
+            //checking that first name is not left blank
+            
+            //$("loginForm").hover(function(){
+            //      if ($("#username").val() != "admin") {
+            //     $("#usernameError").html("Wrong username").show();
+            //     isValid = false;
+            // }
+            // });
+            // if ($("#username").val() != "admin") {
+            //     $("#usernameError").html("Wrong username");
+            //     return;
+            //     isValid = false;
+            // }
+            
+            
+            //CHECK USERNAME
+            if(isValid == true){
+            $.ajax({
+                    type: "post",
+                    url: "processLogin.php",
+                    dataType: "json",
+                    data: { "username": $("#username").val(), "password": $("#password").val() },
+                    success: function(data,status) {
+                          //alert(data);  
+                          if (data) {
+                              $("#usernameError").html("");
+                              $("#username").css({"background-color": "green"});
+                              
+                          } else {
+                             
+                              $("#usernameError").html("Wrong username");
+                              $("#username").css({"background-color": "red"});
+                              isValid = false;
+                          }
+                      },
+                      complete: function(data,status) { //optional, used for debugging purposes
+                          //alert(status);
+                      }
+                  });//AJAX 
+                  return isValid;
+            }
+            
+            
+        }
+        
          </script>
         
 
