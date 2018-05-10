@@ -73,6 +73,7 @@
                     });//ajax
                 
              } );
+        });
         
        function validateForm(){
             
@@ -123,7 +124,8 @@
             }
             
             
-        }
+       }
+        
         
          </script>
         
